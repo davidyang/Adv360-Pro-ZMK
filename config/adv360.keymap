@@ -17,6 +17,13 @@
             bindings = <&kp RET>;
         };
 
+        altshift: altshift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LALT)>;
+            label = "ALTSHIFT";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -67,11 +74,11 @@
 
         fn {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8         &kp F9       &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans         &trans       &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans         &trans       &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans         &trans       &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &kp PAGE_DOWN  &kp PAGE_UP  &trans   &trans   &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7        &kp F8         &kp F9            &kp F10        &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans        &trans         &trans            &trans         &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &kp LA(LEFT)  &kp LA(DOWN)   &kp LA(UP_ARROW)  &kp LA(RIGHT)  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans        &trans         &trans            &trans         &trans   &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans                &kp PAGE_DOWN  &kp PAGE_UP       &trans         &trans   &trans
             >;
         };
 
